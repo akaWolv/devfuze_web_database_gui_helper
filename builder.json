@@ -1,0 +1,15 @@
+{
+  "osx" : {
+    "title": "FDB helper",
+    "icon": "assets/osx/icon.ico",
+    "icon-size": 128,
+    "contents": [
+      { "x": 355, "y": 125, "type": "link", "path": "/Applications" },
+      { "x": 155, "y": 125, "type": "file" }
+    ]
+  },
+  "win" : {
+    "title" : "FDB helper",
+    "icon" : "assets/win/icon.ico"
+  }
+}

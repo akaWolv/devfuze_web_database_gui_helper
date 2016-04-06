@@ -1,0 +1,60 @@
+@body-bg: #757575;
+
+body {
+  background-color: @body-bg;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.main-views > div,
+.main-views > center {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-views-appear {
+  opacity: 0.01;
+}
+
+.main-views-appear.main-views-appear-active {
+  opacity: 1;
+  transition: opacity .9s ease-in;
+}
+
+
+
+.main-views-enter {
+  opacity: 0.01;
+}
+
+.main-views-enter.main-views-enter-active {
+  opacity: 1;
+
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-transition-delay: 0.1s;
+
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.1s;
+}
+
+
+
+.main-views-leave {
+  opacity: 1;
+}
+
+.main-views-leave.main-views-leave-active {
+  opacity: 0.01;
+
+  -webkit-transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-delay: 0s;
+
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
