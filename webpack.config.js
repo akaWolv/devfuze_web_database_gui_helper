@@ -1,4 +1,4 @@
-const  IS_PRODUCTION = process.argv.indexOf('production') >= -1;
+const  IS_PRODUCTION = process.argv.indexOf('--production') >= -1;
 var webpack = require('webpack');
 
 var excludes = [];
