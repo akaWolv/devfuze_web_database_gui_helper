@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>FDBMaster</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div id="container">
+    <!-- main content -->
+</div>
+<!-- electron declaration -->
+<script>
+    const electron = require('electron');
+    if (undefined !== window.process.env.NODE_ENV_STAGE &&'development' == window.process.env.NODE_ENV_STAGE) {
+        function lazyLoad(s) {
+            var d = window.document;
+            b = d.body;
+            e = d.createElement("script");
+            e.src = s;
+
+            var r = new XMLHttpRequest();
+            r.open('GET', s);
+            r.send();
+            r.onreadystatechange = function () {
+                b.appendChild(e);
+            };
+        }
+
+        lazyLoad('http://localhost:8080/webpack-dev-server.js');
+        lazyLoad('http://localhost:8080/built/bundle.js');
+    } else {
+        require('./built/bundle.js')
+    }
+</script>
+</body>
+</html>
